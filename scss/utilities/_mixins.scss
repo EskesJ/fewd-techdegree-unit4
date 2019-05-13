@@ -1,0 +1,10 @@
+// **********************************************
+//Mixins
+// **********************************************
+
+@mixin hover-link-style($background-color, $hover-text-color) {
+  & a:hover {
+  background-color: $background-color;
+  color: $hover-text-color;
+  }
+}

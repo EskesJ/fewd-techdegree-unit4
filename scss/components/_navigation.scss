@@ -1,0 +1,18 @@
+// **********************************************
+// Navigation
+// **********************************************
+
+.grid__col--3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.grid__col--3 {
+  text-align: center;
+}
+
+.nav {
+  padding: 0px;
+  @extend %navigation-set-up;
+  @include hover-link-style($color-style-primary, $color-white);
+  }

@@ -1,0 +1,18 @@
+// **********************************************
+//Typography
+// **********************************************
+
+.headline--primary {
+  padding-left: .5em;
+  padding-right: .5em;
+  color: #4FDFF0;
+}
+
+.headline--secondary {
+  font-weight: lighter;
+  padding-left: 1em;
+}
+
+.blockquote {
+  @include blockquote-setUp($font-stack, $color-style-primary);
+}

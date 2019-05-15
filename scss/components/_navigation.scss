@@ -13,6 +13,10 @@
 
 .nav {
   padding: 0px;
-  @extend %navigation-set-up;
+  @extend %navigation-setUp;
   @include hover-link-style($color-style-primary, $color-white);
   }
+
+.card p {
+  @extend %gutter-10px;
+}

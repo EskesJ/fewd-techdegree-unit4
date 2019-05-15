@@ -2,7 +2,7 @@
 // Placeholders
 // **********************************************
 
-%navigation-set-up {
+%navigation-setUp {
   text-align: center;
   & li {
     list-style-type: none;
@@ -13,4 +13,18 @@
     padding-top: 10px;
     padding-bottom: 10px;
   }
+}
+
+%gutter-10px {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+%button-setUp {
+  color: white;
+  padding: 12px 10px 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
 }

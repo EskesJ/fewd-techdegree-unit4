@@ -1,0 +1,33 @@
+// **********************************************
+// Form
+// **********************************************
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.img--avatar {
+  align-self: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.form__input {
+  border: none;
+  border-bottom: 7px solid #4FDFF0;
+  width: 95%;
+  align-self: center;
+  margin-bottom: 1em;
+  padding: 10px;
+}
+
+.form__label--hidden {
+  display: none;
+}
+
+.btn--default {
+  @extend %button-setUp;
+  background-color: $color-style-primary;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}

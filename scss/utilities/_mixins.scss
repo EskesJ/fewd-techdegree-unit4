@@ -9,6 +9,11 @@
   }
 }
 
+@mixin flex-settings($flex-dirextion) {
+  display: flex;
+  flex-direction: $flex-dirextion;
+}
+
 @mixin blockquote-setUp($font-family, $border-color) {
   font-family:$font-family, Courier, monospace;
   font-style: italic;
@@ -18,4 +23,9 @@
   border-left: 5px solid $border-color;
   border-radius: 5px 0 0 5px;
   font-size: 1.2em;
+}
+
+@mixin image-framed($border-color) {
+  padding: 10px;
+  border: solid 1px $border-color;
 }

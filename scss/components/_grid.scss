@@ -7,6 +7,7 @@
 // **********************************************
 
 
+
 // grid base class
 .grid {
 
@@ -33,7 +34,7 @@
       // selector would be .grid__col--1
       &--#{$i} {
 
-        // base styles applied to all grid columns 
+        // base styles applied to all grid columns
         // NOTE: could be converted to a placeholder, along with margin
         // from the  media query
         margin-top: 10px;
@@ -63,6 +64,22 @@
 
       // add grid gutter
       margin-left: 10px;
+    }
+  }
+}
+
+
+//Loop will count from 1 through 12.
+// if the key $i has a value in map called $grid-colors then
+// a css rule will be created for styling the grid__col-- classes
+.theme__colors {
+  @for $i from 1 through 12 {
+    @if map-has-key($grid-colors, $i) {
+    &.grid__col--#{$i} {
+      @extend %grid-setup;
+      text-align: left;
+      background-color: map-get($grid-colors, $i);
+      }
     }
   }
 }

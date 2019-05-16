@@ -1,0 +1,14 @@
+// **********************************************
+// Buttons
+// **********************************************
+
+.grid__col--12 {
+  @include flex-settings(column);
+}
+
+@each $button, $color in $button-color-pairs {
+  .btn--#{$button} {
+    @extend %button-setUp;
+    background-color: $color;
+  }
+}

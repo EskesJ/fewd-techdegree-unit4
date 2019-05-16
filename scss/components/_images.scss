@@ -1,0 +1,11 @@
+// **************************************
+// Images
+// **************************************
+.grid__col--6 {
+  text-align: center;
+}
+
+
+.img--frame {
+  @include image-framed($color-font-primary);
+}

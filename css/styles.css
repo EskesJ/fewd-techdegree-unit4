@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Karma");
-.nav {
-  text-align: center;
-}
 .nav li {
   list-style-type: none;
 }
@@ -12,18 +9,31 @@
   padding-bottom: 10px;
 }
 
+.nav {
+  text-align: center;
+}
+
 .card p {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-.btn--default {
+.btn--info, .btn--warning, .btn--error, .btn--success, .btn--default {
   color: white;
   padding: 12px 10px 10px;
   font-weight: bold;
   text-transform: uppercase;
   border: none;
   border-radius: 3px;
+  margin-top: 1em;
+}
+
+.theme__colors.grid__col--12, .theme__colors.grid__col--8, .theme__colors.grid__col--7, .theme__colors.grid__col--6, .theme__colors.grid__col--5, .theme__colors.grid__col--4, .theme__colors.grid__col--3 {
+  padding: 12px 10px 10px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  margin-top: 0.4em;
 }
 
 * {
@@ -508,9 +518,33 @@ template {
   }
 }
 
-.grid__col--3 {
-  margin-top: 30px;
-  margin-bottom: 15px;
+.theme__colors.grid__col--3 {
+  text-align: left;
+  background-color: #deb2ee;
+}
+.theme__colors.grid__col--4 {
+  text-align: left;
+  background-color: #7ee6fd;
+}
+.theme__colors.grid__col--5 {
+  text-align: left;
+  background-color: #88d9a0;
+}
+.theme__colors.grid__col--6 {
+  text-align: left;
+  background-color: #3fabca;
+}
+.theme__colors.grid__col--7 {
+  text-align: left;
+  background-color: #ec9fa3;
+}
+.theme__colors.grid__col--8 {
+  text-align: left;
+  background-color: #fd9f85;
+}
+.theme__colors.grid__col--12 {
+  text-align: left;
+  background-color: #80e8d1;
 }
 
 .grid__col--3 {
@@ -573,8 +607,36 @@ template {
 
 .btn--default {
   background-color: #4FDFF0;
-  margin-top: 1em;
-  margin-bottom: 2em;
+}
+
+.grid__col--6 {
+  text-align: center;
+}
+
+.img--frame {
+  padding: 10px;
+  border: solid 1px #A0A0A0;
+}
+
+.grid__col--12 {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn--success {
+  background-color: #63cc82;
+}
+
+.btn--error {
+  background-color: #e4757a;
+}
+
+.btn--warning {
+  background-color: #fd7856;
+}
+
+.btn--info {
+  background-color: #927bc1;
 }
 
 /*# sourceMappingURL=styles.css.map */

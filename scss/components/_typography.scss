@@ -13,6 +13,10 @@
   padding-left: 1em;
 }
 
+.card a {
+    color: $color-style-primary;
+}
+
 .blockquote {
   @include blockquote-setUp($font-stack, $color-style-primary);
 }

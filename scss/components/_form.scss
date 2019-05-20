@@ -3,13 +3,16 @@
 // **********************************************
 
 .form {
- @include flex-settings(column);
+ @include flex-settings($dir: column);
 }
 
 .img--avatar {
   align-self: center;
   margin-top: 30px;
   margin-bottom: 30px;
+  @include mq ($breakpoint) {
+    margin-top: 0px;
+  }
 }
 
 .form__input {
@@ -19,6 +22,11 @@
   align-self: center;
   margin-bottom: 1em;
   padding: 10px;
+}
+
+.headline--secondary {
+  margin-top: 21.280px;
+  margin-bottom: 21.280px;
 }
 
 .form__label--hidden {

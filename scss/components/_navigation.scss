@@ -3,16 +3,29 @@
 // **********************************************
 
 
+
 .grid__col--3 {
-  text-align: center;
+  @extend %text-align-center
 }
 
+.grid__col--9 {
+    @media (min-width: $breakpoint) {
+      flex-basis: 70%;
+      align-content: center;
+    }
+}
+
+
 .nav {
-  padding: 0px;
-  @extend %navigation-setUp;
+  @include navigation-setUp(10px 0 10px);
   @extend %text-align-center;
   @include hover-link-style($color-style-primary, $color-white);
+    @include mq ($breakpoint) {
+      @include flex-settings($dir: row, $just: flex-end);
+      @include navigation-setUp(5px 20px);
+      margin-top: 30px;
   }
+}
 
 .card p {
   @extend %gutter-10px;

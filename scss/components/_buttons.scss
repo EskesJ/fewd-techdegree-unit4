@@ -3,7 +3,15 @@
 // **********************************************
 
 .grid__col--12 {
-  @include flex-settings(column);
+  @include flex-settings($dir: column);
+  @include mq ($breakpoint) {
+    @include flex-settings($dir: row, $just: space-around);
+    @each $button in $button-names {
+      .#{$button}.theme__colors {
+        width: 15%;
+      }
+    }
+  }
 }
 
 @each $button, $color in $button-color-pairs {

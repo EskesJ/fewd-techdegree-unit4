@@ -2,6 +2,18 @@
 //Mixins
 // **********************************************
 
+@mixin navigation-setUp($padding) {
+  & li {
+    list-style-type: none;
+  }
+  & a {
+    text-decoration: none;
+    display: block;
+    padding: $padding;
+  }
+}
+
+//hover link
 @mixin hover-link-style($background-color, $hover-text-color) {
   & a:hover {
   background-color: $background-color;
@@ -9,11 +21,18 @@
   }
 }
 
-@mixin flex-settings($flex-dirextion) {
-  display: flex;
-  flex-direction: $flex-dirextion;
+//flexbox settings
+@mixin flex-settings($disp: flex,
+$dir: null,
+$wrap: null,
+$just: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
 }
 
+//blockquote
 @mixin blockquote-setUp($font-family, $border-color) {
   font-family:$font-family, Courier, monospace;
   font-style: italic;
@@ -25,7 +44,15 @@
   font-size: 1.2em;
 }
 
+//image with borders
 @mixin image-framed($border-color) {
   padding: 10px;
   border: solid 1px $border-color;
+}
+
+//media query
+@mixin mq ($break) {
+  @media (min-width: $break) {
+    @content;
+  }
 }

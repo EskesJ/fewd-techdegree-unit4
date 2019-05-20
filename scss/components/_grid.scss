@@ -18,7 +18,7 @@
     flex-direction: column;
 
     // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
+      @include mq ($breakpoint) {
       flex-direction: row;
     }
   }
@@ -41,17 +41,17 @@
         flex-basis: 100%;
 
         // NOTE: replace with media query mixin if aiming for exceeds
-        @media (min-width: 768px) {
+        @include mq ($breakpoint) {
 
           // base stlyes applied to all grid columns
           margin-top: 0;
 
           // make column width a percentage of the column number / total columns
           flex-basis: #{$i / 12 * 100 + "%"} ;
+          }
         }
       }
     }
-  }
 }
 
 // targets all elements with classes that begin with grid__col
@@ -60,11 +60,12 @@
   & + & {
 
     // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
+      @include mq ($breakpoint) {
 
       // add grid gutter
       margin-left: 10px;
     }
+
   }
 }
 
@@ -75,11 +76,31 @@
 .theme__colors {
   @for $i from 1 through 12 {
     @if map-has-key($grid-colors, $i) {
-    &.grid__col--#{$i} {
-      @extend %grid-setup;
-      text-align: left;
-      background-color: map-get($grid-colors, $i);
+      &.grid__col--#{$i} {
+        @extend %grid-setup;
+        text-align: left;
+        background-color: map-get($grid-colors, $i);
       }
     }
   }
+    @include mq ($breakpoint) {
+    @for $i from 1 through 12 {
+      @if map-has-key($grid-colors, $i) {
+        &.grid__col--#{$i} {
+          @extend %grid-setup;
+          text-align: center;
+          background-color: map-get($grid-colors, $i);
+}
+}
+}
+}
+}
+
+.centered {
+    @include mq ($breakpoint) {
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
 }

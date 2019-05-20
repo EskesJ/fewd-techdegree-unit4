@@ -10,6 +10,9 @@ $color-white: #fff;
 
 $color-style-primary: #4FDFF0;
 
+//list with button names
+$button-names: ('btn--default', 'btn--success', 'btn--error', 'btn--warning', 'btn--info');
+
 //colors for button
 $button-color-pairs: (
 'success': #63cc82,
@@ -32,3 +35,7 @@ $grid-colors: (
 //FONTS **********************************************
 @import url('https://fonts.googleapis.com/css?family=Karma');
 $font-stack: 'Karma', serif;
+
+//media query breakpoints **********************************************
+
+$breakpoint: 768px;

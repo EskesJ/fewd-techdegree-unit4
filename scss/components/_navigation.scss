@@ -9,7 +9,7 @@
 }
 
 .grid__col--9 {
-    @media (min-width: $breakpoint) {
+    @include mq ($breakpoint) {
       flex-basis: 70%;
       align-content: center;
     }
